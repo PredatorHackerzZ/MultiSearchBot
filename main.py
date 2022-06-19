@@ -1,4 +1,4 @@
-# (c) @AbirHasan2005 & Jigar Varma & Hemanta Pokharel & Akib Hridoy
+# (c) @AbirHasan2005 | @PredatorHackerzZ
 
 import asyncio
 from pyrogram import Client, filters
