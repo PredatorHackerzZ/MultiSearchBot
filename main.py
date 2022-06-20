@@ -141,17 +141,16 @@ async def inline_handlers(_, inline: InlineQuery):
                             description=f"Seeders: {torrentList[i]['Seeders']}, Leechers: {torrentList[i]['Leechers']}\nSize: {torrentList[i]['Size']}",
                             input_message_content=InputTextMessageContent(
                                 message_text=f"**Information**\n"
-                                             f"**Package Name:** {info['PackageName']}\n"
-                                             f"**Title:** {info['Title']}\n"
-                                             f"**Seeders:** `{torrentList[i]['Seeders']}`\n"
-                                             f"**Leechers:** `{torrentList[i]['Leechers']}`\n"
+                                             f"**Package Name:** {torrentList[i]['PackageName']}\n"
+                                             f"**Title:** {torrentList[i]['Title']}\n"
+                                             f"**Pip Command:** {torrentList[i]['PipCommand']}\n"
+                                             f"**About:** `{torrentList[i]['About']}`\n"
                                              f"**Uploader:** `{torrentList[i]['Uploader']}`\n"
-                                             f"**Uploaded on {torrentList[i]['Date']}**\n\n"
-                                             f"**Magnet:**\n`{torrentList[i]['Magnet']}`\n\nPowered By @TheTeleRoid",
+                                             f"**Uploaded on {torrentList[i]['Date']}**\n\nPowered By @TheTeleRoid",
                                 parse_mode="Markdown"
                             ),
                             reply_markup=InlineKeyboardMarkup(
-                                [[InlineKeyboardButton("Search Again", switch_inline_query_current_chat="!pb ")]])
+                                [[InlineKeyboardButton("Search Again", switch_inline_query_current_chat="!pypi ")]])
                         )
                     )
     elif search_ts.startswith("!yts"):
