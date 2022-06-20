@@ -105,6 +105,55 @@ async def inline_handlers(_, inline: InlineQuery):
                                 [[InlineKeyboardButton("Search Again", switch_inline_query_current_chat="!pb ")]])
                         )
                     )
+    elif search_ts.startswith("!pypi"):
+        query = search_ts.split(" ", 1)[-1]
+        if (query == "") or (query == " "):
+            answers.append(
+                InlineQueryResultArticle(
+                    title="!pypi [text]",
+                    description="Search For the PYPI in Inline...",
+                    input_message_content=InputTextMessageContent(
+                        message_text="`!pypi [text]`\n\nSearch The PyPi from Inline!",
+                        parse_mode="Markdown"
+                    ),
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Search Again", switch_inline_query_current_chat="!pypi ")]])
+                )
+            )
+        else:
+            torrentList = await SearchPyPi(query)
+            if not torrentList:
+                answers.append(
+                    InlineQueryResultArticle(
+                        title="No PYPI Data Found in The API!",
+                        description=f"Can't find pypi for {query} in The Bot !!",
+                        input_message_content=InputTextMessageContent(
+                            message_text=f"No pypi Found For `{query}` in The Bot !!",
+                            parse_mode="Markdown"
+                        ),
+                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Try Again", switch_inline_query_current_chat="!pb ")]])
+                    )
+                )
+            else:
+                for i in range(len(torrentList)):
+                    answers.append(
+                        InlineQueryResultArticle(
+                            title=f"{torrentList[i]['Name']}",
+                            description=f"Seeders: {torrentList[i]['Seeders']}, Leechers: {torrentList[i]['Leechers']}\nSize: {torrentList[i]['Size']}",
+                            input_message_content=InputTextMessageContent(
+                                message_text=f"**Package Name:** {info['PackageName']}\n"
+                                             f"**Package Name:** `{torrentList[i]['Seeders']}`\n"
+                                             f"**Size:** `{torrentList[i]['Size']}`\n"
+                                             f"**Seeders:** `{torrentList[i]['Seeders']}`\n"
+                                             f"**Leechers:** `{torrentList[i]['Leechers']}`\n"
+                                             f"**Uploader:** `{torrentList[i]['Uploader']}`\n"
+                                             f"**Uploaded on {torrentList[i]['Date']}**\n\n"
+                                             f"**Magnet:**\n`{torrentList[i]['Magnet']}`\n\nPowered By @TheTeleRoid",
+                                parse_mode="Markdown"
+                            ),
+                            reply_markup=InlineKeyboardMarkup(
+                                [[InlineKeyboardButton("Search Again", switch_inline_query_current_chat="!pb ")]])
+                        )
+                    )
     elif search_ts.startswith("!yts"):
         query = search_ts.split(" ", 1)[-1]
         if (query == "") or (query == " "):
