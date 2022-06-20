@@ -9,6 +9,7 @@ API_1337x = "https://api.abirhasan.wtf/1337x?query={}&limit={}"
 API_YTS = "https://api.abirhasan.wtf/yts?query={}&limit={}"
 API_PIRATEBAY = "https://api.abirhasan.wtf/piratebay?query={}&limit={}"
 API_ANIME = "https://api.abirhasan.wtf/anime?query={}&limit={}"
+API_PYPI = "https://api.abirhasan.wtf/pypi?query="
 
 
 async def Search1337x(query: str):
@@ -32,4 +33,10 @@ async def SearchPirateBay(query: str):
 async def SearchAnime(query: str):
     async with aiohttp.ClientSession() as session:
         async with session.get(requote_uri(API_ANIME.format(query, Config.MAX_INLINE_RESULTS))) as res:
+            return (await res.json())["results"] if ((await res.json()).get("results", None) is not None) else []
+
+
+async def SearchPyPi(query: str):
+    async with aiohttp.ClientSession() as session:
+        async with session.get(requote_uri(API_PYPI.format(query, Config.MAX_INLINE_RESULTS))) as res:
             return (await res.json())["results"] if ((await res.json()).get("results", None) is not None) else []
