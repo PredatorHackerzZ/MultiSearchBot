@@ -120,7 +120,7 @@ async def inline_handlers(_, inline: InlineQuery):
                 )
             )
         else:
-            torrentList = await SearchPyPi(query)
+            torrentList = await pypi(query)
             if not torrentList:
                 answers.append(
                     InlineQueryResultArticle(
