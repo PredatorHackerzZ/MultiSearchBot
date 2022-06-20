@@ -79,3 +79,15 @@ SEARCH_BUTTONS = InlineKeyboardMarkup(
         ]
     ]
 )
+
+TORRENT_SEARCH_MARKUP = [
+                    [InlineKeyboardButton("Search YTS", switch_inline_query_current_chat="!yts "),
+                     InlineKeyboardButton("Go Inline", switch_inline_query="!yts ")],
+                    [InlineKeyboardButton("Search ThePirateBay", switch_inline_query_current_chat="!pb "),
+                     InlineKeyboardButton("Go Inline", switch_inline_query="!pb ")],
+                    [InlineKeyboardButton("Search 1337x", switch_inline_query_current_chat=""),
+                     InlineKeyboardButton("Go Inline", switch_inline_query="")],
+                    [InlineKeyboardButton("Search Anime", switch_inline_query_current_chat="!a "),
+                     InlineKeyboardButton("GO Inline", switch_inline_query_current_chat="!a ")],
+                    [InlineKeyboardButton("Developer : @TheTeleRoid", url="https://t.me/TheTeleRoid")]
+                ]
