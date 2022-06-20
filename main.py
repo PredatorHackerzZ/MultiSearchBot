@@ -5,23 +5,11 @@ from pyrogram import Client, filters
 from pyrogram.errors import QueryIdInvalid, FloodWait
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, InlineQuery, InlineQueryResultArticle, \
     InputTextMessageContent
-
+from TheTeleRoid.Scripts import script
 from configs import Config
 from tool import SearchYTS, SearchAnime, Search1337x, SearchPirateBay
 
 TorrentBot = Client(session_name=Config.SESSION_NAME, api_id=Config.API_ID, api_hash=Config.API_HASH, bot_token=Config.BOT_TOKEN)
-DEFAULT_SEARCH_MARKUP = [
-                    [InlineKeyboardButton("Search YTS", switch_inline_query_current_chat="!yts "),
-                     InlineKeyboardButton("Go Inline", switch_inline_query="!yts ")],
-                    [InlineKeyboardButton("Search ThePirateBay", switch_inline_query_current_chat="!pb "),
-                     InlineKeyboardButton("Go Inline", switch_inline_query="!pb ")],
-                    [InlineKeyboardButton("Search 1337x", switch_inline_query_current_chat=""),
-                     InlineKeyboardButton("Go Inline", switch_inline_query="")],
-                    [InlineKeyboardButton("Search Anime", switch_inline_query_current_chat="!a "),
-                     InlineKeyboardButton("GO Inline", switch_inline_query_current_chat="!a ")],
-                    [InlineKeyboardButton("Developer: @AbirHasan2005", url="https://t.me/AbirHasan2005")]
-                ]
-
 
 @TorrentBot.on_message(filters.command("start"))
 async def start_handler(_, message: Message):
@@ -29,7 +17,7 @@ async def start_handler(_, message: Message):
         await message.reply_text(
             text="Hello, I am Torrent Search Bot!\n"
                  "I can search Torrent Magnetic Links from Inline.\n\n"
-                 "Made by @AbirHasan2005",
+                 "Made by @TeleRoidGroup",
             disable_web_page_preview=True,
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(DEFAULT_SEARCH_MARKUP)
@@ -53,7 +41,7 @@ async def inline_handlers(_, inline: InlineQuery):
                     message_text="Search for Torrents from Inline!",
                     parse_mode="Markdown"
                 ),
-                reply_markup=InlineKeyboardMarkup(DEFAULT_SEARCH_MARKUP)
+                reply_markup=InlineKeyboardMarkup(TORRENT_SEARCH_MARKUP)
             )
         )
     elif search_ts.startswith("!pb"):
