@@ -2,92 +2,102 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 class Script:
 
-START_TEXT = """Hᴇʏ! {}
+START_TEXT = """
+👋 Hᴇʏ {}
 
-☞ Vᴇʀʏ Hᴀᴘᴘʏ ᴛᴏ Kɴᴏᴡ Tʜᴀᴛ Yᴏᴜ ᴀʀᴇ Dᴏɴᴀᴛɪɴɢ Uꜱ.
+I ᴀᴍ Tᴇʟᴇɢʀᴀᴍ Mᴏsᴛ Pᴏᴡᴇʀғᴜʟ Search Bᴏᴛ.
 
-Tʜᴀɴᴋꜱ Fᴏʀ Uꜱɪɴɢ [Oᴜʀ Bᴏᴛꜱ](https://t.me/+KYLCdC4XfcdmNGVl).
+Usᴇ /help ʙᴜᴛᴛᴏɴ ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ.
 
-Mᴀᴅᴇ Wɪᴛʜ Lᴏᴠᴇ Fᴏʀ [Yᴏᴜ](tg://settings)"""
+Mᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : @TeleRoidGroup
+"""
+    HELP_TEXT = """
+How to Search Torrent, PyPi, Google, Applications & ManyMore. 
 
-DONATE_BUTTONS = [
-    InlineKeyboardButton(
-        text='Dᴏɴᴀᴛᴇ 💳',
-        url='https://t.me/DonateXRoBot'
+➠ Sᴇɴᴅ ᴀ ʟɪɴᴋ ғᴏʀ ᴜᴘʟᴏᴀᴅ ᴛᴏ ᴛᴇʟᴇɢʀᴀᴍ ғɪʟᴇ ᴏʀ ᴍᴇᴅɪᴀ.
+
+Sᴇᴛ ᴛʜᴜᴍʙɴᴀɪʟ
+
+➠ sᴇɴᴅ ᴀ ᴘʜᴏᴛᴏ ᴛᴏ ᴍᴀᴋᴇ ɪᴛ ᴀs ᴘᴇʀᴍᴀɴᴇɴᴛ ᴛʜᴜᴍʙɴᴀɪʟ.
+
+ᴅᴇʟᴇᴛɪɴɢ ᴛʜᴜᴍʙɴᴀɪʟ
+
+➠ Sᴇɴᴅ /delthumbnail ᴛᴏ ᴅᴇʟᴇᴛᴇ ᴛʜᴜᴍʙɴᴀɪʟ.
+
+Sᴇᴛᴛɪɴɢs
+
+➠ Cᴏɴғɪɢᴜʀᴇ ᴍʏ Sᴇᴛᴛɪɴɢs ᴛᴏ ᴄʜᴀɴɢᴇ ᴜᴘʟᴏᴀᴅ ᴍᴏᴅᴇ
+
+sʜᴏᴡ ᴛʜᴜᴍʙɴᴀɪʟ
+
+➠ Sᴇɴᴅ /viewthumbnail ᴛᴏ ᴠɪᴇᴡ ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ.
+
+ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : @TheTeleRoid
+ 
+"""
+    ABOUT_TEXT = """
+<b>Mʏ ɴᴀᴍᴇ : <a href='http://t.me/MultiSearchXBot'>Search ʙᴏᴛ</a></b>
+
+<b>Cʜᴀɴɴᴇʟ : <a href='https://t.me/TeleRoidGroup'>@TᴇʟᴇRᴏɪᴅGʀᴏᴜᴘ</a></b>
+
+<b>Sᴜᴘᴘᴏʀᴛ : <a href='https://t.me/TeleRoid14'>@Tᴇʟᴇʀᴏɪᴅ𝟷𝟺</a></b>
+
+<b>Vᴇʀꜱɪᴏɴ : <a href='https://t.me/joinchat/t1ko_FOJxhFiOThl'>2.0 ʙᴇᴛᴀ</a></b>
+
+<b>Sᴏᴜʀᴄᴇ : <a href='https://github.com/PredatorHackerzZ'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a></b>
+
+<b>Sᴇʀᴠᴇʀ : <a href='https://heroku.com/'>ʜᴇʀᴏᴋᴜ</a></b>
+
+<b>Lᴀɴɢᴜᴀɢᴇ : <a href='https://www.python.org/'>Pʏᴛʜᴏɴ 3.10.2</a></b>
+
+<b>Fʀᴀᴍᴇᴡᴏʀᴋ : <a href='https://docs.pyrogram.org/'>ᴘʏʀᴏɢᴀᴍ 1.3.6</a></b>
+
+<b>Dᴇᴠᴇʟᴏᴘᴇʀ : <a href='https://t.me/MoviesFlixers_DL'>Pʀᴇᴅᴀᴛᴏʀ</a></b>
+
+<b>Mᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://t.me/TheTeleRoid'>@TʜᴇTᴇʟᴇRᴏɪᴅ</a></b>
+
+"""
+
+    START_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('⚙Join Updates Channel ⚙ ', url='https://t.me/TeleRoidGroup')
+        ],[
+        InlineKeyboardButton('🆘 Hᴇʟᴘ', callback_data='help'),
+        InlineKeyboardButton('👤 Aʙᴏᴜᴛ', callback_data='about')
+        ],[
+        InlineKeyboardButton('🔐 Cʟᴏsᴇ', callback_data='close')
+        ]]
     )
-]
-
-HELP_TEXT = """Hᴇʏ! {}
-Yᴏᴜ Cᴀɴ Dᴏɴᴀᴛᴇ Uꜱ Uꜱɪɴɢ UPI.
-
-PayTm/PhonePe/GooglePay - `sk7062563@okhdfcbank`
-
-Oʀ Cᴏɴᴛᴀcᴛ Uꜱ :- [ツAʙʜɪsʜᴇᴋ Kᴜᴍᴀʀ 🇮🇳](https://telegram.me/HelpLessBoi). """
-
-ABOUT_TEXT = """Hᴇʏ! {}
-Yᴏᴜ Cᴀɴ Dᴏɴᴀᴛᴇ Uꜱ Uꜱɪɴɢ UPI.
-
-PayTm/PhonePe/GooglePay - `sk7062563@okhdfcbank`
-
-Oʀ Cᴏɴᴛᴀcᴛ Uꜱ :- [ツAʙʜɪsʜᴇᴋ Kᴜᴍᴀʀ 🇮🇳](https://telegram.me/HelpLessBoi). """
-
-HELP_BUTTONS = InlineKeyboardMarkup(
-    [
-        [
-            InlineKeyboardButton(" Back ", callback_data="back"),
-            InlineKeyboardButton(" PayPal ", url="https://paypal.me/AbhishekKumarIN47")
-        ],
-        [
-            InlineKeyboardButton('Close', callback_data='close')
-        ]
-    ]
-)
-
-START_BUTTONS = InlineKeyboardMarkup(
-    [
-        [
-            InlineKeyboardButton(" UPI ", callback_data="upidata"),
-            InlineKeyboardButton(" PayPal ", url="https://paypal.me/AbhishekKumarIN47")
-        ],
-        [
-            InlineKeyboardButton('Close', callback_data='close')
-        ]
-    ]
-)
-
-ABOUT_BUTTONS = InlineKeyboardMarkup(
-    [
-        [
-            InlineKeyboardButton(" Back ", callback_data="back"),
-            InlineKeyboardButton(" PayPal ", url="https://paypal.me/AbhishekKumarIN47")
-        ],
-        [
-            InlineKeyboardButton('Close', callback_data='close')
-        ]
-    ]
-)
-
-SEARCH_BUTTONS = InlineKeyboardMarkup(
-    [
-        [
-            InlineKeyboardButton(" YouTube ", switch_inline_query_current_chat="!yt"),
-            InlineKeyboardButton(" Google ", switch_inline_query_current_chat="!go")
-        ],
-        [
-            InlineKeyboardButton(" Torrent ", switch_inline_query_current_chat="!torr"),
-            InlineKeyboardButton(" Play-Store ", switch_inline_query_current_chat="!app")
-        ]
-    ]
-)
-
-TORRENT_SEARCH_MARKUP = [
-                    [InlineKeyboardButton("Search YTS", switch_inline_query_current_chat="!yts "),
-                     InlineKeyboardButton("Go Inline", switch_inline_query="!yts ")],
-                    [InlineKeyboardButton("Search ThePirateBay", switch_inline_query_current_chat="!pb "),
-                     InlineKeyboardButton("Go Inline", switch_inline_query="!pb ")],
-                    [InlineKeyboardButton("Search 1337x", switch_inline_query_current_chat=""),
-                     InlineKeyboardButton("Go Inline", switch_inline_query="")],
-                    [InlineKeyboardButton("Search Anime", switch_inline_query_current_chat="!a "),
-                     InlineKeyboardButton("GO Inline", switch_inline_query_current_chat="!a ")],
-                    [InlineKeyboardButton("Developer : @TheTeleRoid", url="https://t.me/TheTeleRoid")]
-                ]
+    HELP_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('🏡 ʜᴏᴍᴇ', callback_data='home'),
+        InlineKeyboardButton('👤 Aʙᴏᴜᴛ', callback_data='about')
+        ],[
+        InlineKeyboardButton('🔐 Cʟᴏsᴇ', callback_data='close')
+        ]]
+    )
+    ABOUT_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('🏡 Hᴏᴍᴇ', callback_data='home'),
+        InlineKeyboardButton('🆘 Hᴇʟᴘ', callback_data='help')
+        ],[
+        InlineKeyboardButton('🔐 Cʟᴏsᴇ', callback_data='close')
+        ]]
+    )
+    BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('🏡 ʜᴏᴍᴇ', callback_data='home'),
+        InlineKeyboardButton('🆘 ʜᴇʟᴘ', callback_data='help')
+        ],[
+        InlineKeyboardButton('🔐 ᴄʟᴏsᴇ', callback_data='close')
+        ]]
+    )
+    SEARCH_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton(" YouTube ", switch_inline_query_current_chat="!yt"),
+        InlineKeyboardButton(" Google ", switch_inline_query_current_chat="!go")
+        ],[
+        InlineKeyboardButton(" Torrent ", switch_inline_query_current_chat="!torr"),
+        InlineKeyboardButton(" Play-Store ", switch_inline_query_current_chat="!app")
+        ]]
+    )
