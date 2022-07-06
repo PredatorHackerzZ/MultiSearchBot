@@ -70,12 +70,12 @@ ABOUT_BUTTONS = InlineKeyboardMarkup(
 SEARCH_BUTTONS = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(" YouTube ", url="b"),
-            InlineKeyboardButton(" Google ", url="https://paypal.me/AbhishekKumarIN47")
+            InlineKeyboardButton(" YouTube ", switch_inline_query_current_chat="!yt"),
+            InlineKeyboardButton(" Google ", switch_inline_query_current_chat="!go")
         ],
         [
-            InlineKeyboardButton(" TORRENT ", url="back"),
-            InlineKeyboardButton(" Image ", url="https://paypal.me/AbhishekKumarIN47")
+            InlineKeyboardButton(" Torrent ", switch_inline_query_current_chat="!torr"),
+            InlineKeyboardButton(" Play-Store ", switch_inline_query_current_chat="!app")
         ]
     ]
 )
