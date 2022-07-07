@@ -2,7 +2,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 class Script:
 
-START_TEXT = """
+    START_TEXT = """
 👋 Hᴇʏ {}
 
 I ᴀᴍ Tᴇʟᴇɢʀᴀᴍ Mᴏsᴛ Pᴏᴡᴇʀғᴜʟ Search Bᴏᴛ.
