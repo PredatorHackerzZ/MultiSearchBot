@@ -5,19 +5,17 @@ from pyrogram import Client, filters
 from pyrogram.errors import QueryIdInvalid, FloodWait
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, InlineQuery, InlineQueryResultArticle, \
     InputTextMessageContent
-from TheTeleRoid.Scripts import script
+from MultiSearchBot.Scripts import script
 from configs import Config
 from tool import SearchYTS, SearchAnime, Search1337x, SearchPirateBay
 
-TorrentBot = Client(session_name=Config.SESSION_NAME, api_id=Config.API_ID, api_hash=Config.API_HASH, bot_token=Config.BOT_TOKEN)
+Bot = Client(session_name=Config.SESSION_NAME, api_id=Config.API_ID, api_hash=Config.API_HASH, bot_token=Config.BOT_TOKEN)
 
-@TorrentBot.on_message(filters.command("start"))
+@Bot.on_message(filters.command("start"))
 async def start_handler(_, message: Message):
     try:
         await message.reply_text(
-            text="Hello, I am Torrent Search Bot!\n"
-                 "I can search Torrent Magnetic Links from Inline.\n\n"
-                 "Made by @TeleRoidGroup",
+            text=START_TEXT,
             disable_web_page_preview=True,
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(DEFAULT_SEARCH_MARKUP)
@@ -28,7 +26,7 @@ async def start_handler(_, message: Message):
         await start_handler(_, message)
 
 
-@TorrentBot.on_inline_query()
+@Bot.on_inline_query()
 async def inline_handlers(_, inline: InlineQuery):
     search_ts = inline.query
     answers = []
@@ -307,4 +305,4 @@ async def inline_handlers(_, inline: InlineQuery):
             await asyncio.sleep(5)
 
 
-TorrentBot.run()
+Bot.run()
