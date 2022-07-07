@@ -1,11 +1,11 @@
-# (c) @AbirHasan2005 | @PredatorHackerzZ
+# (c) @PredatorHackerzZ
 
 import asyncio
 from pyrogram import Client, filters
 from pyrogram.errors import QueryIdInvalid, FloodWait
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, InlineQuery, InlineQueryResultArticle, \
     InputTextMessageContent
-from MultiSearchBot.Scripts import script
+from MultiSearchBot.scripts import Script
 from configs import Config
 from tool import SearchYTS, SearchAnime, Search1337x, SearchPirateBay, SearchPyPi
 
