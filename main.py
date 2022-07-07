@@ -7,7 +7,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, 
     InputTextMessageContent
 from MultiSearchBot.Scripts import script
 from configs import Config
-from tool import SearchYTS, SearchAnime, Search1337x, SearchPirateBay
+from tool import SearchYTS, SearchAnime, Search1337x, SearchPirateBay, SearchPyPi
 
 Bot = Client(session_name=Config.SESSION_NAME, api_id=Config.API_ID, api_hash=Config.API_HASH, bot_token=Config.BOT_TOKEN)
 
