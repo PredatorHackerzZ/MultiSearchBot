@@ -1,26 +1,30 @@
 {
-    "name": "Torrent Search Bot by @AbirHasan2005",
-    "description": "A Simple Telegram Inline Torrent Search Bot in Pyrogram by @AbirHasan2005",
+    "name": "A Multi Search Bot by @PredatorHackerzZ",
+    "description": "A Simple Telegram Inline Multi Search Bot in Pyrogram by @PredatorHackerzZ",
     "keywords": [
         "telegram",
         "inline",
         "torrent",
-        "search",
-        "bot"
+        "youtube",
+        "google",
+        "playstore",
+        "pypi",
+        "bot",
+        "image"
     ],
-    "repository": "https://github.com/AbirHasan2005/Torrent-Search-Bot",
-    "website": "https://telegram.dog/AbirHasan2005",
-    "success_url": "https://github.com/AbirHasan2005/Torrent-Search-Bot",
+    "repository": "https://github.com/PredatorHackerzZ/MultiSearchBot",
+    "website": "https://telegram.dog/TheTeleRoid",
+    "success_url": "https://github.com/PredatorHackerzZ/MultiSearchBot",
     "env": {
         "API_ID": {
-            "description": "Get this value from my.telegram.org or @TeleORG_Bot"
+            "description": "Get this value from my.telegram.org"
         },
         "API_HASH": {
-            "description": "Get this value from my.telegram.org or @TeleORG_Bot"
+            "description": "Get this value from my.telegram.org"
         },
         "SESSION_NAME": {
             "description": "Any Bot Session Name. You can keep default!",
-            "value": "Torrent-Search-Bot"
+            "value": "MultiSearchBot"
         },
         "BOT_TOKEN": {
             "description": "Your Telegram Bot Token by @BotFather"
