@@ -18,7 +18,7 @@ async def start_handler(_, message: Message):
             text=START_TEXT,
             disable_web_page_preview=True,
             parse_mode="Markdown",
-            reply_markup=InlineKeyboardMarkup(DEFAULT_SEARCH_MARKUP)
+            reply_markup=InlineKeyboardMarkup(SEARCH_BUTTONS)
         )
     except FloodWait as e:
         print(f"[{Config.SESSION_NAME}] - Sleeping for {e.x}s")
@@ -39,7 +39,7 @@ async def inline_handlers(_, inline: InlineQuery):
                     message_text="Search for Torrents from Inline!",
                     parse_mode="Markdown"
                 ),
-                reply_markup=InlineKeyboardMarkup(TORRENT_SEARCH_MARKUP)
+                reply_markup=InlineKeyboardMarkup(SEARCH_BUTTONS)
             )
         )
     elif search_ts.startswith("!pb"):
