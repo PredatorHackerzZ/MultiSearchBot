@@ -15,7 +15,7 @@ Bot = Client(session_name=Config.SESSION_NAME, api_id=Config.API_ID, api_hash=Co
 async def start_handler(_, message: Message):
     try:
         await message.reply_text(
-            text=START_TEXT,
+            text=Script.START_TEXT,
             disable_web_page_preview=True,
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(SEARCH_BUTTONS)
