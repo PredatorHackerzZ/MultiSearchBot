@@ -58,6 +58,14 @@ sʜᴏᴡ ᴛʜᴜᴍʙɴᴀɪʟ
 
 """
 
+    INLINE_TEXT = """
+<b><u>Inline Help For Users</u></b>
+➠ Search '@MultiSearchXBot !torr/!pb/!a/!yts' for Torrent or Anime Search.
+➠ Search '@MultiSearchXBot !go' for Google Search.
+➠ Search '@MultiSearchXBot !yt' for YouTube Videos Search.
+➠ Search '@MultiSearchXBot !pypi' for Python Package Search.
+➠ Search '@MultiSearchXBot !app' for Play-Store Applications.
+"""
     START_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton(' ⚙ Join Updates Channel ⚙ ', url='https://t.me/TeleRoidGroup')
