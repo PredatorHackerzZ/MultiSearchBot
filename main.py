@@ -18,7 +18,7 @@ async def start_handler(_, message: Message):
             text=Script.START_TEXT.format(message.from_user.mention),
             disable_web_page_preview=True,
             parse_mode="Markdown",
-            reply_markup=Script.SEARCH_BUTTONS
+            reply_markup=Script.START_BUTTONS
         )
     except FloodWait as e:
         print(f"[{Config.SESSION_NAME}] - Sleeping for {e.x}s")
@@ -33,10 +33,10 @@ async def inline_handlers(_, inline: InlineQuery):
     if search_ts == "":
         answers.append(
             InlineQueryResultArticle(
-                title="Search Something ...",
-                description="Search For Torrents ...",
+                title="Search Something Inline...",
+                description="Search For Google, PYPI, Torrents, YouTube...",
                 input_message_content=InputTextMessageContent(
-                    message_text="Search for Torrents from Inline!",
+                    message_text="Search for Anything you Want from Inline!",
                     parse_mode="Markdown"
                 ),
                 reply_markup=Script.SEARCH_BUTTONS
