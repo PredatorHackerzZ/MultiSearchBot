@@ -60,12 +60,13 @@ sʜᴏᴡ ᴛʜᴜᴍʙɴᴀɪʟ
 
     START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('⚙Join Updates Channel ⚙ ', url='https://t.me/TeleRoidGroup')
+        InlineKeyboardButton(' ⚙ Join Updates Channel ⚙ ', url='https://t.me/TeleRoidGroup')
         ],[
         InlineKeyboardButton('🆘 Hᴇʟᴘ', callback_data='help'),
-        InlineKeyboardButton('👤 Aʙᴏᴜᴛ', callback_data='about')
-        ],[
+        InlineKeyboardButton('👤 Aʙᴏᴜᴛ', callback_data='about'),
         InlineKeyboardButton('🔐 Cʟᴏsᴇ', callback_data='close')
+        ],[
+        InlineKeyboardButton('♨ Inline Buttons ♨', callback_data='inline_buttons')
         ]]
     )
     HELP_BUTTONS = InlineKeyboardMarkup(
@@ -94,10 +95,12 @@ sʜᴏᴡ ᴛʜᴜᴍʙɴᴀɪʟ
     )
     SEARCH_BUTTONS = InlineKeyboardMarkup(
         [[
+        InlineKeyboardButton(" Torrent ", switch_inline_query_current_chat="!torr")
+        ],[
         InlineKeyboardButton(" YouTube ", switch_inline_query_current_chat="!yt"),
         InlineKeyboardButton(" Google ", switch_inline_query_current_chat="!go")
         ],[
-        InlineKeyboardButton(" Torrent ", switch_inline_query_current_chat="!torr"),
+        InlineKeyboardButton(" PyPi ", switch_inline_query_current_chat="!pypi"),
         InlineKeyboardButton(" Play-Store ", switch_inline_query_current_chat="!app")
         ]]
     )
