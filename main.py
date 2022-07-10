@@ -6,6 +6,7 @@ from pyrogram.errors import QueryIdInvalid, FloodWait
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, InlineQuery, CallbackQuery, InlineQueryResultArticle, \
     InputTextMessageContent
 from MultiSearchBot.scripts import Script
+from MultiSearchBot.callback import *
 from configs import Config
 from tool import SearchYTS, SearchAnime, Search1337x, SearchPirateBay, SearchPyPi
 
