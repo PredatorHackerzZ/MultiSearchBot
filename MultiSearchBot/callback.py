@@ -14,7 +14,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQ
 async def button(_, message: Message):
     if message.data == "home":
         await message.edit_text(
-            text=Script.START_TEXT.format(update.from_user.mention),
+            text=Script.START_TEXT.format(message.from_user.mention),
             reply_markup=Script.START_BUTTONS,
             disable_web_page_preview=True
         )
