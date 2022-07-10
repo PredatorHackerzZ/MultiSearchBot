@@ -10,7 +10,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQ
 
 
 @Bot.on_callback_query()
-async def button(_, message: Message):
+async def button(_, message):
     if message.data == "home":
         await message.edit(
             text=Script.START_TEXT.format(message.from_user.mention),
