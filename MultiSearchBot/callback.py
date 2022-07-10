@@ -3,7 +3,7 @@
 
 # (c) @PredatorHackerzZ | @TeamTeleRoid
 
-from pyrogram import Client 
+from pyrogram import Client as Bot
 from MultiSearchBot.scripts import Script
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
