@@ -17,7 +17,7 @@ async def start_handler(_, message: Message):
         await message.reply_text(
             text=Script.START_TEXT.format(message.from_user.mention),
             disable_web_page_preview=True,
-            parse_mode="Markdown",
+            parse_mode="html",
             reply_markup=Script.START_BUTTONS
         )
     except FloodWait as e:
