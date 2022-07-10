@@ -9,7 +9,6 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 
 
-
 @Bot.on_callback_query()
 async def button(_, message: Message):
     if message.data == "home":
