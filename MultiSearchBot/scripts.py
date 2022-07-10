@@ -12,7 +12,7 @@ Usᴇ /help ʙᴜᴛᴛᴏɴ ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ.
 Mᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : @TeleRoidGroup
 """
     HELP_TEXT = """
-How to Search Torrent, PyPi, Google, Applications & ManyMore. 
+Hᴏᴡ ᴛᴏ Sᴇᴀʀᴄʜ Tᴏʀʀᴇɴᴛ, PʏPɪ, Gᴏᴏɢʟᴇ, Aᴘᴘʟɪᴄᴀᴛɪᴏɴs & MᴀɴʏMᴏʀᴇ.
 
 ➠ Sᴇɴᴅ ᴀ ʟɪɴᴋ ғᴏʀ ᴜᴘʟᴏᴀᴅ ᴛᴏ ᴛᴇʟᴇɢʀᴀᴍ ғɪʟᴇ ᴏʀ ᴍᴇᴅɪᴀ.
 
