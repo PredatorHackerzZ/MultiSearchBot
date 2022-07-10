@@ -1,6 +1,7 @@
-#callback_data
 #!/usr/bin/env python3
-# (c) @PredatorHackerzZ
+# -*- coding: utf-8 -*-
+
+# (c) @PredatorHackerzZ | @TeamTeleRoid
 
 from pyrogram import Client 
 from MultiSearchBot.scripts import Script
