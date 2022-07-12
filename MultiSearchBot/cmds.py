@@ -18,7 +18,7 @@ else:
     from config import Config
 
 # the Strings used for this "thing"
-from MultiSearch.Scripts import script
+from MultiSearchBot.scripts import Script
 from pyrogram import filters
 from pyrogram import Client as Bot
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
@@ -31,11 +31,11 @@ async def help_user(bot, update):
     # logger.info(update)
     await bot.send_message(
         chat_id=update.chat.id,
-        text=script.HELP_TEXT,
+        text=Script.HELP_TEXT,
         parse_mode="html",
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id,
-        reply_markup=script.HELP_BUTTONS
+        reply_markup=Script.HELP_BUTTONS
    )
 
 
@@ -44,11 +44,11 @@ async def start(bot, update):
     # logger.info(update)
     await bot.send_message(
         chat_id=update.chat.id,
-        text=script.START_TEXT.format(update.from_user.mention),
+        text=Script.START_TEXT.format(update.from_user.mention),
         parse_mode="html",
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id,
-        reply_markup=script.START_BUTTONS
+        reply_markup=Script.START_BUTTONS
     )
 
 @Bot.on_message(filters.private & filters.command("about") )
@@ -56,9 +56,9 @@ async def about_user(bot, update):
     # logger.info(update)
     await bot.send_message(
         chat_id=update.chat.id,
-        text=script.ABOUT_TEXT,
+        text=Script.ABOUT_TEXT,
         parse_mode="html",
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id,
-        reply_markup=script.ABOUT_BUTTONS
+        reply_markup=Script.ABOUT_BUTTONS
     )
