@@ -1,6 +1,7 @@
 {
     "name": "A Multi Search Bot by @PredatorHackerzZ",
     "description": "A Simple Telegram Inline Multi Search Bot in Pyrogram by @PredatorHackerzZ",
+    "logo": "images/logo.jpg",
     "keywords": [
         "telegram",
         "inline",
