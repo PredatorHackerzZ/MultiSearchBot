@@ -1,114 +1,198 @@
+# (c) MrAbhi2k3 and PredatorHackerzz
+# https://github.com/PredatorHackerzZ/MultiSearchBot
+
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, CallbackQuery
 
 class Script:
 
-    START_TEXT = """
-👋 Hᴇʏ {}
+    START_TEXT = """<b>👋 Welcome to MultiSearch Bot!</b>
 
-I ᴀᴍ Tᴇʟᴇɢʀᴀᴍ Mᴏsᴛ Pᴏᴡᴇʀғᴜʟ Search Bᴏᴛ.
+I am a lightweight and powerful search bot designed to help you find:
+✨ Movies & TV Shows
+🎵 Music from various sources
+🎬 Anime series
+🎬 Torrent files from multiple platforms
+📱 TikTok videos
+🎮 And much more!
 
-Usᴇ /help ʙᴜᴛᴛᴏɴ ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ.
+<b>Use /help to learn how to use me</b>
+<b>Use /start_track to enable user tracking</b>"""
 
-Mᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : @TeleRoidGroup
-"""
-    HELP_TEXT = """
-Hᴏᴡ ᴛᴏ Sᴇᴀʀᴄʜ Tᴏʀʀᴇɴᴛ, PʏPɪ, Gᴏᴏɢʟᴇ, Aᴘᴘʟɪᴄᴀᴛɪᴏɴs & MᴀɴʏMᴏʀᴇ.
+    HELP_MENU = """<b>📚 MULTISEARCH BOT HELP</b>
 
-➠ Sᴇɴᴅ ᴀ ʟɪɴᴋ ғᴏʀ ᴜᴘʟᴏᴀᴅ ᴛᴏ ᴛᴇʟᴇɢʀᴀᴍ ғɪʟᴇ ᴏʀ ᴍᴇᴅɪᴀ.
+Choose a topic to learn how to use the bot.
 
-Sᴇᴛ ᴛʜᴜᴍʙɴᴀɪʟ
+<b>Tap any item below:</b>"""
 
-➠ sᴇɴᴅ ᴀ ᴘʜᴏᴛᴏ ᴛᴏ ᴍᴀᴋᴇ ɪᴛ ᴀs ᴘᴇʀᴍᴀɴᴇɴᴛ ᴛʜᴜᴍʙɴᴀɪʟ.
+    HELP_TORRENT_TEXT = """<b>🔥 TORRENT SEARCH</b>
 
-ᴅᴇʟᴇᴛɪɴɢ ᴛʜᴜᴍʙɴᴀɪʟ
+• <code>@MultiSearchXBot !pb movie_name</code> - Search PirateBay torrents
+• <code>@MultiSearchXBot !1337x movie_name</code> - Search 1337x torrents
+• <code>@MultiSearchXBot !yts movie_name</code> - Search YTS movie torrents
+• <code>@MultiSearchXBot !nyaa anime_name</code> - Search anime torrents
 
-➠ Sᴇɴᴅ /delthumbnail ᴛᴏ ᴅᴇʟᴇᴛᴇ ᴛʜᴜᴍʙɴᴀɪʟ.
+<b>Example:</b> <code>@MultiSearchXBot !pb the matrix 1080p</code>
+<b>Example:</b> <code>@MultiSearchXBot !1337x ubuntu 20.04</code>"""
 
-Sᴇᴛᴛɪɴɢs
+    HELP_MOVIE_TEXT = """<b>🎬 MOVIES & TV SEARCH</b>
 
-➠ Cᴏɴғɪɢᴜʀᴇ ᴍʏ Sᴇᴛᴛɪɴɢs ᴛᴏ ᴄʜᴀɴɢᴇ ᴜᴘʟᴏᴀᴅ ᴍᴏᴅᴇ
+• <code>@MultiSearchXBot !movie movie_name</code> - Search movies with streaming links
+• <code>@MultiSearchXBot !tmdb movie_name</code> - Search TMDB database
+• <code>@MultiSearchXBot !anime anime_name</code> - Search anime series info
 
-sʜᴏᴡ ᴛʜᴜᴍʙɴᴀɪʟ
+<b>Example:</b> <code>@MultiSearchXBot !movie avengers 1080p</code>"""
 
-➠ Sᴇɴᴅ /viewthumbnail ᴛᴏ ᴠɪᴇᴡ ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ.
+    HELP_ANIME_TEXT = """<b>🌸 ANIME SEARCH</b>
 
-ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : @TheTeleRoid
- 
-"""
-    ABOUT_TEXT = """
-<b>Mʏ ɴᴀᴍᴇ : <a href='http://t.me/MultiSearchXBot'>Search ʙᴏᴛ</a></b>
+• <code>@MultiSearchXBot !anime anime_name</code> - Search anime series and episodes
+• <code>@MultiSearchXBot !nyaa anime_name</code> - Search anime torrents
 
-<b>Cʜᴀɴɴᴇʟ : <a href='https://t.me/TeleRoidGroup'>@TᴇʟᴇRᴏɪᴅGʀᴏᴜᴘ</a></b>
+<b>Example:</b> <code>@MultiSearchXBot !anime one piece</code>"""
 
-<b>Sᴜᴘᴘᴏʀᴛ : <a href='https://t.me/TeleRoid14'>@Tᴇʟᴇʀᴏɪᴅ𝟷𝟺</a></b>
+    HELP_MUSIC_TEXT = """<b>🎵 MUSIC SEARCH</b>
 
-<b>Vᴇʀꜱɪᴏɴ : <a href='https://t.me/joinchat/t1ko_FOJxhFiOThl'>2.0 ʙᴇᴛᴀ</a></b>
+• <code>@MultiSearchXBot !music song_name</code> - Search songs
+• <code>@MultiSearchXBot !artist artist_name</code> - Search artists
+• <code>@MultiSearchXBot !album album_name</code> - Search albums
+• <code>@MultiSearchXBot !ytdl youtube_url</code> - Download YouTube audio
 
-<b>Sᴏᴜʀᴄᴇ : <a href='https://github.com/PredatorHackerzZ'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a></b>
+<b>Example:</b> <code>@MultiSearchXBot !music imagine dragons</code>"""
 
-<b>Sᴇʀᴠᴇʀ : <a href='https://heroku.com/'>ʜᴇʀᴏᴋᴜ</a></b>
+    HELP_VIDEO_TEXT = """<b>📱 VIDEO SEARCH</b>
 
-<b>Lᴀɴɢᴜᴀɢᴇ : <a href='https://www.python.org/'>Pʏᴛʜᴏɴ 3.10.2</a></b>
+• <code>@MultiSearchXBot !tiktok search_query</code> - Search TikTok videos
+• <code>@MultiSearchXBot !youtube search_query</code> - Search YouTube videos
 
-<b>Fʀᴀᴍᴇᴡᴏʀᴋ : <a href='https://docs.pyrogram.org/'>ᴘʏʀᴏɢᴀᴍ 1.3.6</a></b>
+<b>Example:</b> <code>@MultiSearchXBot !tiktok dance trend</code>"""
 
-<b>Dᴇᴠᴇʟᴏᴘᴇʀ : <a href='https://t.me/MoviesFlixers_DL'>Pʀᴇᴅᴀᴛᴏʀ</a></b>
+    HELP_TRACK_TEXT = """<b>📊 TRACKING & COMMANDS</b>
 
-<b>Mᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://t.me/TheTeleRoid'>@TʜᴇTᴇʟᴇRᴏɪᴅ</a></b>
+• <code>/start</code> - Start the bot
+• <code>/help</code> - Open this help menu
+• <code>/about</code> - Bot information
+• <code>/stats</code> - Show statistics
+• <code>/start_track</code> - Enable tracking
+• <code>/my_searches</code> - View your search history
 
-"""
+<b>🔖 Filters:</b>
+• HD, 1080p, 720p, 4K, LATEST, POPULAR, ENGLISH, HINDI, TAMIL
 
-    INLINE_TEXT = """
-<b><u>Inline Help For Users</u></b>
+<b>Example:</b> <code>@MultiSearchXBot !movie inception 1080p english</code>"""
+
+    ABOUT_TEXT = """<b>ℹ️ ABOUT MULTISEARCH BOT</b>
+
+<b>👤 Bot Name:</b> <a href='https://t.me/MultiSearchXBot'>MultiSearch Bot</a>
+
+<b>📝 Description:</b>
+A lightweight and powerful search bot that helps you find movies, music, torrents, and more from multiple sources.
+
+<b>💻 Technology Stack:</b>
+• Language: Python 3.10+
+• Framework: Pyrogram 1.4+
+• Async: aiohttp for fast API calls
+• Database: MongoDB (Optional)
+
+<b>👨‍💻 Developers:</b>
+• <a href='https://github.com/MrAbhi2k3'>MrAbhi2k3</a>
+• <a href='https://github.com/PredatorHackerzZ'>PredatorHackerzZ</a>
+
+<b>🔗 Useful Links:</b>
+<a href='https://github.com/PredatorHackerzZ/MultiSearchBot'>GitHub Repository</a>
+
+<b>📢 Community:</b>
+• Channel: @TeleRoidGroup
+• Support: @TeleRoid14
+
+<b>✨ Version: 2.0 Beta</b>"""
+
+    INLINE_TEXT = """<b><u>Inline Help For Users</u></b>
 ➠ Search '@MultiSearchXBot !torr/!pb/!a/!yts' for Torrent or Anime Search.
 ➠ Search '@MultiSearchXBot !go' for Google Search.
 ➠ Search '@MultiSearchXBot !yt' for YouTube Videos Search.
-➠ Search '@MultiSearchXBot !pypi' for Python Package Search.
-➠ Search '@MultiSearchXBot !app' for Play-Store Applications.
+➠ Search '@MultiSearchXBot !music' for Music Search.
+➠ Search '@MultiSearchXBot !tiktok' for TikTok Videos.
 """
+    
     START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton(' ⚙ Join Updates Channel ⚙ ', url='https://t.me/TeleRoidGroup')
+        InlineKeyboardButton('📢 Join Updates', url='https://t.me/TeleRoidGroup')
         ],[
-        InlineKeyboardButton('🆘 Hᴇʟᴘ', callback_data='help'),
-        InlineKeyboardButton('👤 Aʙᴏᴜᴛ', callback_data='about'),
-        InlineKeyboardButton('🔐 Cʟᴏsᴇ', callback_data='close')
+        InlineKeyboardButton('🆘 Help', callback_data='help'),
+        InlineKeyboardButton('ℹ️ About', callback_data='about'),
+        InlineKeyboardButton('📊 Stats', callback_data='stats')
         ],[
-        InlineKeyboardButton('♨ Inline Buttons ♨', callback_data='inline_buttons')
+        InlineKeyboardButton('💬 Support', url='https://t.me/TeleRoid14'),
+        InlineKeyboardButton('🔐 Close', callback_data='close')
         ]]
     )
+    
+    HELP_MENU_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('🔥 Torrents', callback_data='help_torrent'),
+        InlineKeyboardButton('🎬 Movies', callback_data='help_movie')
+        ],[
+        InlineKeyboardButton('🎵 Music', callback_data='help_music'),
+        InlineKeyboardButton('🎌 Anime', callback_data='help_anime')
+        ],[
+        InlineKeyboardButton('📱 Videos', callback_data='help_video'),
+        InlineKeyboardButton('📊 Commands', callback_data='help_track')
+        ],[
+        InlineKeyboardButton('🏠 Home', callback_data='home'),
+        InlineKeyboardButton('🔐 Close', callback_data='close')
+        ]]
+    )
+
+    HELP_SECTION_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('◀ Back', callback_data='help'),
+        InlineKeyboardButton('🏠 Home', callback_data='home')
+        ],[
+        InlineKeyboardButton('🔐 Close', callback_data='close')
+        ]]
+    )
+
     HELP_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('🏡 ʜᴏᴍᴇ', callback_data='home'),
-        InlineKeyboardButton('👤 Aʙᴏᴜᴛ', callback_data='about')
+        InlineKeyboardButton('🏠 Home', callback_data='home'),
+        InlineKeyboardButton('ℹ️ About', callback_data='about')
         ],[
-        InlineKeyboardButton('🔐 Cʟᴏsᴇ', callback_data='close')
+        InlineKeyboardButton('📊 Stats', callback_data='stats'),
+        InlineKeyboardButton('🔐 Close', callback_data='close')
         ]]
     )
+    
     ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('🏡 Hᴏᴍᴇ', callback_data='home'),
-        InlineKeyboardButton('🆘 Hᴇʟᴘ', callback_data='help')
+        InlineKeyboardButton('🏠 Home', callback_data='home'),
+        InlineKeyboardButton('🆘 Help', callback_data='help')
         ],[
-        InlineKeyboardButton('🔐 Cʟᴏsᴇ', callback_data='close')
+        InlineKeyboardButton('💬 Support', url='https://t.me/TeleRoid14'),
+        InlineKeyboardButton('🔐 Close', callback_data='close')
         ]]
     )
-    BUTTONS = InlineKeyboardMarkup(
-        [[
-        InlineKeyboardButton('🏡 ʜᴏᴍᴇ', callback_data='home'),
-        InlineKeyboardButton('🆘 ʜᴇʟᴘ', callback_data='help')
-        ],[
-        InlineKeyboardButton('🔐 ᴄʟᴏsᴇ', callback_data='close')
-        ]]
-    )
+    
     SEARCH_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton(" Torrent ", switch_inline_query_current_chat="!torr")
+        InlineKeyboardButton('🎬 Search Movies', switch_inline_query_current_chat='!movie '),
+        InlineKeyboardButton('🎵 Search Music', switch_inline_query_current_chat='!music ')
         ],[
-        InlineKeyboardButton(" YouTube ", switch_inline_query_current_chat="!yt"),
-        InlineKeyboardButton(" Google ", switch_inline_query_current_chat="!go")
+        InlineKeyboardButton('🔥 Search Torrents', switch_inline_query_current_chat='!pb '),
+        InlineKeyboardButton('🎌 Search Anime', switch_inline_query_current_chat='!anime ')
         ],[
-        InlineKeyboardButton(" PyPi ", switch_inline_query_current_chat="!pypi"),
-        InlineKeyboardButton(" Play-Store ", switch_inline_query_current_chat="!app")
+        InlineKeyboardButton('📱 TikTok Search', switch_inline_query_current_chat='!tiktok '),
+        InlineKeyboardButton('🎮 More Options', switch_inline_query_current_chat='!help ')
+        ]]
+    )
+    
+    CLOSE_BUTTON = InlineKeyboardMarkup(
+        [[InlineKeyboardButton('🔐 Close', callback_data='close')]]
+    )
+
+    BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('🏡 Home', callback_data='home'),
+        InlineKeyboardButton('🆘 Help', callback_data='help')
+        ],[
+        InlineKeyboardButton('🔐 Close', callback_data='close')
         ]]
     )

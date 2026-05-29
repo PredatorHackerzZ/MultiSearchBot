@@ -1,4 +1,6 @@
-Pyrogram==1.4.16
+pyrotgfork
 TgCrypto
 aiohttp
 requests
+motor
+pymongo
